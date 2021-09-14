@@ -2,17 +2,21 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-// ?
+var vj = [ 1 , 5, 10, 15 ];
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
-// ?
+function myFunction(arr) {
+... return arr;
+... };
 
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-// ?
+function myFunction(arr) {
+... return arr[1];
+... };
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -21,18 +25,23 @@ no primeiro parâmetro. O índice usado para retornar o valor, deve ser o númer
 segundo parâmetro.
 */
 // ?
-
+function Ghost(arr, num) {
+... return arr[num]
+... };
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
 // ?
-
+var vitor = [ 5, 'Vitor', 23, 'Custodio', 'TADS' ]
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-// ?
-
+// 
+Ghost(vitor, 0)
+Ghost(vitor, 1)
+Ghost(vitor, 2)
+Ghost(vitor, 3)
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
 livro. Dentro dessa função, declare uma variável que recebe um objeto com as
@@ -47,30 +56,37 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-// ?
+function book(nomelivro) {
+... var livros = { 'Senhor dos Aneis': { quantidadeDePaginas: 550, autor: 'Percy Jackson', editora: 'Warner' }, 'Introdução ao HTML5': { quantidadeDePaginas: 225, autor: 'Bruce Lawson & Remy Sharp', editora: 'Alta Books' }, 'Smashing CSS': { quantidadeDePaginas: 283, autor: 'Erick A. Meyer', editora: 'Bookman' } };
+... return !nomelivro ? livros : livros[nomelivro];
+... }
+
+
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-// ?
+
+> book()
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
-
+var pag = 'Senhor dos Aneis';
+undefined
+> console.log('O livro ' + pag + ' tem ' + book(pag).quantidadeDePaginas + ' páginas!');
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-// ?
+console.log('O autor do livro ' + pag + ' é ' + book(pag).autor );
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-// ?
+ console.log('O autor do livro ' + pag + ' é ' + book(pag).editora );
