@@ -87,7 +87,6 @@ para a chamada à `calculator` acima.
 uma função anônima que irá retornar a soma dos dois números que essa função
 anônima tem como seus argumentos.
 */
-console.log( 'O resultado da soma é:' );
    console.log( 'O resultado da soma é:' );
   console.log(sum(function (number1, number2) {
     return number1 + number2;
