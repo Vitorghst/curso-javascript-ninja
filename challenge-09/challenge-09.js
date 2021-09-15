@@ -41,16 +41,17 @@ myFunction2();
     myFunction3();
 */
 function myFunction3() {
-    console.log( 'A soma de 40 e 50 é igual a', sum() );
-    var number2 = 50;
-    console.log( 'Na função myFunction3, number1 é igual a', number1 );
-    var number1 = 40;
-    return sum();
-    function sum() {
-        return number1 + number2;
-    };
-}
-myFunction3();
+      function sum() {
+          return number1 + number2;
+      }
+
+      var number1 = 40;
+      var number2 = 50;
+      console.log( 'A soma de 40 e 50 é igual a', sum() );
+      console.log( 'Na função myFunction3, number1 é igual a', number1 );
+      return sum();
+  }
+  myFunction3();
 
 /*
 No desafio anterior criamos uma calculadora, usando uma estrutura funcional.
@@ -65,13 +66,17 @@ o retorno de `calculator`.
 por parâmetro, INVOCADA, e passando a ela por parâmetro os dois valores
 que foram passadas para a primeira função `calculator`.
 */
-// ?
+function calculator(x, y) {
+  return function(callback) {
+    return callback(x, y);
+  }
+};
 
 /*
 Declare uma variável chamada `sum`, e atribua a ela a função `calculator`,
 passando dois números por parâmetro.
 */
-// ?
+ var sum = calculator(9, 3);
 
 /*
 Sabemos que `sum` agora tem uma função atribuída a ela, que é o retorno de
@@ -83,6 +88,10 @@ uma função anônima que irá retornar a soma dos dois números que essa funç�
 anônima tem como seus argumentos.
 */
 console.log( 'O resultado da soma é:' );
+   console.log( 'O resultado da soma é:' );
+  console.log(sum(function (number1, number2) {
+    return number1 + number2;
+  }));
 // ?
 
 /*
@@ -90,7 +99,13 @@ Agora declare outra variáveis chamadas `subtraction`, `multiplication`,
 `division` e `mod`, e atribua à elas `calculator`, passando números
 diferentes para cada chamada.
 */
-// ?
+ var subtraction = calculator(5, 9)
+undefined
+> var multiplication = calculator(6, 7);
+undefined
+> var division = calculator(4, 2);
+undefined
+> var mod = calculator(8, 8);
 
 /*
 Mostre as variáveis acima no `console` (uma chamada de console por variável),
@@ -100,13 +115,25 @@ As suas respostas devem estar abaixo dos `console.log` referentes à cada
 chamada.
 */
 console.log( 'O resultado da subtração é:' );
+   console.log(subtraction(function (number1, number2) {
+... return number1 - number2;
+... }));
 // ?
 
 console.log( 'O resultado da multiplicação é:' );
+     console.log(multiplication(function (number1, number2) {
+... return number1 * number2;
+... }));
 // ?
 
 console.log( 'O resultado da divisão é:' );
+       console.log(division(function (number1, number2) {
+... return number1 / number2;
+... }));
 // ?
 
 console.log( 'O resto da divisão é:' );
+         console.log(mod(function (number1, number2) {
+... return number1 % number2;
+... }));
 // ?
